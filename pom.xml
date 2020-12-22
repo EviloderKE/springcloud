@@ -12,6 +12,7 @@
         <module>order</module>
         <module>payment</module>
         <module>common</module>
+        <module>eureka-server</module>
     </modules>
 
     <properties>
