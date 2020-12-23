@@ -13,6 +13,9 @@
         <module>payment</module>
         <module>common</module>
         <module>eureka-server</module>
+        <module>eureka-server-cluster-one</module>
+        <module>eureka-server-cluster-two</module>
+        <module>payment-eureka-cluster</module>
     </modules>
 
     <properties>

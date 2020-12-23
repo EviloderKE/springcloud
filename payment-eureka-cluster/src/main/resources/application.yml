@@ -1,0 +1,13 @@
+server:
+  port: 9001
+
+spring:
+  application:
+    name: payment-eureka-cluster
+
+eureka:
+  client:
+    register-with-eureka: true
+    fetch-registry: true
+    service-url:
+      defaultZone: http://eurekaone.com:8101/eureka,http://eurekatwo.com:8102/eureka
