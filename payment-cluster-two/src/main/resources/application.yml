@@ -1,5 +1,5 @@
 server:
-  port: 9000
+  port: 9001
 
 spring:
   application:
@@ -11,3 +11,6 @@ eureka:
     fetch-registry: true
     service-url:
       defaultZone: http://localhost:8100/eureka
+  instance:
+    instance-id: paymentTwo
+    prefer-ip-address: true

@@ -16,7 +16,7 @@ public class OrderController {
 
     @GetMapping("get")
     public User get(){
-        String url = "http://localhost:9000/payment/test";
+        String url = "http://PAYMENT/payment/test";
         return restTemplate.getForObject(url, User.class);
     }
 

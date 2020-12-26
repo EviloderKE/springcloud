@@ -10,7 +10,8 @@
     <version>1.0-SNAPSHOT</version>
     <modules>
         <module>order</module>
-        <module>payment</module>
+        <module>payment-cluster-one</module>
+        <module>payment-cluster-two</module>
         <module>common</module>
         <module>eureka-server</module>
         <module>eureka-server-cluster-one</module>

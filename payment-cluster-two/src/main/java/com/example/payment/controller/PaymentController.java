@@ -11,7 +11,7 @@ public class PaymentController {
 
     @GetMapping("/test")
     public User test(){
-        return new User("zk", 26);
+        return new User("zk", 2);
     }
 
 }
