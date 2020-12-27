@@ -17,6 +17,7 @@
         <module>eureka-server-cluster-one</module>
         <module>eureka-server-cluster-two</module>
         <module>payment-eureka-cluster</module>
+        <module>feign-order</module>
     </modules>
 
     <properties>
