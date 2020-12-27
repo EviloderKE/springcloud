@@ -10,7 +10,7 @@ import java.util.concurrent.TimeUnit;
 public class PaymentService {
 
     @HystrixCommand(fallbackMethod = "myFallBack", commandProperties = {
-            @HystrixProperty(name = "execution.isolation.thread.timeoutInMilliseconds", value = "1000" )
+            @HystrixProperty(name = "execution.isolation.thread.timeoutInMilliseconds", value = "3000" )
     })
     public String timeOut(){
         try {
