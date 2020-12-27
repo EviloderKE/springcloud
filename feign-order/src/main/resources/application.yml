@@ -11,3 +11,6 @@ eureka:
     fetch-registry: true
     service-url:
       defaultZone: http://localhost:8100/eureka
+ribbon:
+  read-time-out: 5000
+  connection-time-out: 5000
