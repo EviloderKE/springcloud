@@ -14,3 +14,6 @@ eureka:
 ribbon:
   read-time-out: 5000
   connection-time-out: 5000
+logging:
+  level:
+    example.order.service.PaymentFeignService: debug
