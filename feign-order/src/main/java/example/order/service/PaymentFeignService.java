@@ -8,7 +8,7 @@ import org.springframework.stereotype.Service;
 import org.springframework.web.bind.annotation.GetMapping;
 
 @Service
-@FeignClient("PAYMENT")
+@FeignClient(value = "PAYMENT", fallback = PaymentHystrixService.class)
 public interface PaymentFeignService {
 
     @GetMapping("payment/test")

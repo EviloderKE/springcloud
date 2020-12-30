@@ -17,3 +17,6 @@ ribbon:
 logging:
   level:
     example.order.service.PaymentFeignService: debug
+feign:
+  hystrix:
+    enabled: true
