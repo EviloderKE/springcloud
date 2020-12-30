@@ -1,6 +1,7 @@
 package example.order.controller;
 
 import com.example.common.entities.User;
+import com.netflix.hystrix.contrib.javanica.annotation.DefaultProperties;
 import com.netflix.hystrix.contrib.javanica.annotation.HystrixCommand;
 import com.netflix.hystrix.contrib.javanica.annotation.HystrixProperty;
 import example.order.service.PaymentFeignService;
@@ -11,6 +12,7 @@ import org.springframework.web.bind.annotation.RestController;
 
 @RequestMapping("order")
 @RestController
+@DefaultProperties(defaultFallback = "globalFallBack")
 public class OrderController {
 
     @Autowired
@@ -22,15 +24,20 @@ public class OrderController {
     }
 
     @GetMapping("timeout")
-    @HystrixCommand(fallbackMethod = "myFallBack", commandProperties = {
+    /*@HystrixCommand(fallbackMethod = "myFallBack", commandProperties = {
             @HystrixProperty(name = "execution.isolation.thread.timeoutInMilliseconds", value = "2000" )
-    })
+    })*/
+    @HystrixCommand
     public String timeout(){
         return paymentFeignService.timeout();
     }
 
     public String myFallBack(){
         return "order client Hystrix";
+    }
+
+    public String globalFallBack(){
+        return "order client global Hystrix";
     }
 
 }
