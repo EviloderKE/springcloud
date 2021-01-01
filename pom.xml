@@ -20,6 +20,8 @@
         <module>feign-order</module>
         <module>gateway</module>
         <module>config-server</module>
+        <module>stream-producer</module>
+        <module>stream-consumer</module>
     </modules>
 
     <properties>
