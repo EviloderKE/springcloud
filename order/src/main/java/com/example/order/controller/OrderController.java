@@ -26,8 +26,8 @@ public class OrderController {
         return restTemplate.getForObject(url, User.class);
     }
 
-    @GetMapping("test")
-    public String test(){
+    @GetMapping("version")
+    public String version(){
         return version;
     }
 

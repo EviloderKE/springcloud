@@ -7,7 +7,7 @@ spring:
   cloud:
     config:
       label: master
-      name: order
+      name: paymentOne
       profile: dev
       uri: http://localhost:7100
 
