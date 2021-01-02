@@ -1,8 +1,8 @@
 server:
-  port: 9003
+  port: 8003
 spring:
   application:
-    name: nacos-payment-provider
+    name: nacos-order
   cloud:
     nacos:
       discovery:
@@ -13,4 +13,6 @@ management:
       exposure:
         include: "*"
 
-version: 12
+logging:
+  level:
+    com.example.order.service.FeignNacosService: debug

@@ -24,6 +24,7 @@
         <module>stream-consumer</module>
         <module>payment-nacos-cluster-one</module>
         <module>payment-nacos-cluster-two</module>
+        <module>order-nacos</module>
     </modules>
 
     <properties>
