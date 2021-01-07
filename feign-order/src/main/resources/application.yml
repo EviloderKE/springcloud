@@ -11,12 +11,17 @@ spring:
       sampler:
         probability: 1  #采样率值介于0-1之间,1标识全部采集
 
+  security:
+    user:
+      name: eureka
+      password: eureka
+
 eureka:
   client:
     register-with-eureka: true
     fetch-registry: true
     service-url:
-      defaultZone: http://localhost:8100/eureka
+      defaultZone: http://${spring.security.user.name}:${spring.security.user.password}@localhost:8100/eureka
 ribbon:
   read-time-out: 5000
   connection-time-out: 5000
