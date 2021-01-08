@@ -4,11 +4,13 @@ server:
 spring:
   application:
     name: payment
+  profiles:
+    active: dev
   cloud:
     config:
       label: master
       name: paymentOne
-      profile: dev
+      #profile: dev
       uri: http://localhost:7100
 
 management:
