@@ -15,7 +15,8 @@ spring:
   rabbitmq:
     host: localhost
     username: guest
-    password: guest
+#   password: guest
+    password: '{cipher}977805b00d3007ce7ed1ecef97fad35b7cffc764e4af70de9b8334b734796d4e'
     port: 5672
 
 eureka:
@@ -23,10 +24,10 @@ eureka:
     register-with-eureka: true
     fetch-registry: true
     service-url:
-      defaultZone: http://localhost:8100/eureka
+      defaultZone: http://eureka:eureka@localhost:8100/eureka
 
 management:
   endpoints:
     web:
       exposure:
-        include: "bus-refresh"
+        include: "*"
