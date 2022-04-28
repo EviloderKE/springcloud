@@ -11,7 +11,7 @@ spring:
           uri: https://gitee.com/Evildoer_ke/springcloud-config.git
           search-paths:
             - config
-      label: master
+#      label: master
   rabbitmq:
     host: localhost
     username: guest
